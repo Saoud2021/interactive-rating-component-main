@@ -1,0 +1,130 @@
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  font-size: 15px;
+  background-color: var(--very-dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.card {
+  background-color: var(--dark-blue);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.icon-star {
+  background-color: hsl(213, 19%, 22%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+h1,
+h2 {
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+p {
+  color: var(--light-grey);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.rating-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.rating-btn {
+  background-color: hsl(213, 19%, 22%);
+  color: var(--light-grey);
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.rating-btn:hover {
+  background-color: var(--light-grey);
+  color: var(--white);
+}
+
+.rating-btn.active {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: var(--orange);
+  color: var(--white);
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.submit-btn:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+.hidden {
+  display: none;
+}
+
+#thank-you-state {
+  text-align: center;
+}
+
+.thank-you-img {
+  margin-bottom: 1.5rem;
+}
+
+.selected-rating {
+  background-color: hsl(213, 19%, 22%);
+  color: var(--orange);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 400px;
+  }
+}
